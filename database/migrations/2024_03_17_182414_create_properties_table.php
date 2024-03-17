@@ -20,7 +20,7 @@ return new class extends Migration
             $table->float('price');
             $table->string('property-type');
             $table->string('location');
-            $table->string('company_logo');
+            $table->string('Photo');
             $table->timestamps();
 
         });

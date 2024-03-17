@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>Create Client</h1>
-<form action = {{ url('/client')}} method="post" enctype="multipart/form-data" >
+<form action = {{ url('/properties/add')}} method="post" enctype="multipart/form-data" >
     @csrf
     @if ($errors->any())
         <div class="alert alert-danger">

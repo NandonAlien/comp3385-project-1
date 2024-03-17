@@ -27,4 +27,6 @@ Route::get('/properties/create', [PropertiesController::class, 'create']);
 
 Route::get('/properties',[PropertiesController::class, 'properties']);
 
+Route::post('/properties/add',[PropertiesController::class, 'send']);
+
 Route::get('/properties/{property_id}', [PropertiesController::class, 'property']);
