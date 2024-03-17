@@ -35,7 +35,10 @@
     </div>
     <div>
         <label for='property-type'>Property Type</label><br>
-        <input type="text" id="property-type" name="property-type">
+        <select id="property-type" name="property-type">
+        <option value="House" >House</option>
+        <option value="Apartment" >Apartment</option>
+        </select>
     </div>
     <div>
         <label for='location'>Location</label><br>

@@ -22,7 +22,7 @@ class PropertiesController extends Controller
     public function send(Request $request){
 
         $request->validate([
-            'title'=>'required',
+            'property-title'=>'required',
             'description'=>'required',
             'room-amt'=>'required',
             'bathroom-amt'=>'required',
@@ -40,12 +40,14 @@ class PropertiesController extends Controller
         $property->price=$request->input('price');
         $property->type=$request->input('property-type');
         $property->location=$request->input('location');
-        $request->photo->store('images');
-        $property->Photo=$request->photo->path();
-        
+        $property->photoPath=$request->photo->path();
+        $property->photoName=$request->photo->getClientOriginalName();
+        $request->photo->storeAs('images',$request->photo->getClientOriginalName());
+        return view('properties');
     }
 
     public function property($property_id){
-        return view('property');
+        $product = Property::find($property_id);
+        return view('property',['product'=>$product]);
     }
 }

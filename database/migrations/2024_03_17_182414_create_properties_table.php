@@ -13,14 +13,15 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->string('property-title');
+            $table->string('title');
             $table->text('description');
-            $table->integer('room-amt');
-            $table->integer('bathroom-amt');
+            $table->integer('roomAmt');
+            $table->integer('bathroomAmt');
             $table->float('price');
-            $table->string('property-type');
+            $table->string('type');
             $table->string('location');
-            $table->string('Photo');
+            $table->string('photoPath');
+            $table->string('photoName');
             $table->timestamps();
 
         });
