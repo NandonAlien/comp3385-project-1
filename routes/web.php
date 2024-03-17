@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PropertiesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +21,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+
 // Create additional Routes below
+Route::get('/properties/create', [PropertiesController::class, 'create']);
+
+Route::get('/properties',[PropertiesController::class, 'properties']);
+
+Route::get('/properties/{property_id}', [PropertiesController::class, 'property']);
