@@ -9,6 +9,7 @@
         <p>{{$product->roomAmt}} Bedrooms</p>
         <p>{{$product->bathroomAmt}} Bathrooms</p>
         <p>{{$product->location}}</p>
+        <button>Email Realtor</button>
         
 </div>
 @endsection
