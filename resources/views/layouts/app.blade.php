@@ -6,26 +6,26 @@
     <title>COMP3385 - Project 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-white bg-info text-white ">
     <div class="container">
-        <a class="navbar-brand" href="#">COMP3385 - Project 1</a>
+        <a class="navbar-brand text-white fw-bold" href="{{ url('/') }}">COMP3385 - Project 1</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
+                    <a class="nav-link active text-white" aria-current="page" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/about') }}">About</a>
+                    <a class="nav-link text-white" href="{{ url('/about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/properties/create') }}">New Property</a>
+                    <a class="nav-link text-white" href="{{ url('/properties/create') }}">New Property</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/properties') }}">Properties</a>
+                    <a class="nav-link text-white" href="{{ url('/properties') }}">Properties</a>
                 </li>
             </ul>
         </div>

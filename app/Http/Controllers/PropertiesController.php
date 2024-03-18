@@ -40,10 +40,12 @@ class PropertiesController extends Controller
         $property->price=$request->input('price');
         $property->type=$request->input('property-type');
         $property->location=$request->input('location');
-        $property->photoPath=$request->photo->path();
-        $property->photoName=$request->photo->getClientOriginalName();
         $request->photo->storeAs('images',$request->photo->getClientOriginalName());
-        return view('properties');
+        $property->photoPath='storage/';
+        $property->photoName=$request->photo->getClientOriginalName();
+        $property->save();
+        $properties = Property::all();
+        return view('properties',['properties'=>$properties])->with('sucess','New property is added.');
     }
 
     public function property($property_id){
